@@ -95,15 +95,17 @@ public class Main {
     	int leng = arrayList.size();
         System.out.println("Enter the expense you need to search:\t");
         int expense = sc.nextInt();
-        
+        int index = 0;
         for(int i : arrayList)
         {
         	if (i == expense)
         	{
-        		
+        		System.out.println("Expense located at spot " + index + "in array: " + i);
+        		return;
         	}
+        	index++;
         }
-        
+        System.out.println("Expense not found");
     }
     
     private static void sortExpenses(ArrayList<Integer> arrayList) {
